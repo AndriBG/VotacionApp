@@ -1,0 +1,57 @@
+body {
+
+    background-image: url("../img/background/Dragon-Scales.svg");
+    background-attachment: fixed;
+/* background-repeat: no-repeat; */
+/* background-size: cover; */
+    /* background-image: url("../img/background/Maintenance.svg"); */
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 bottom;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .28; */
+}
+
+main {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    background-color: #5555;
+    backdrop-filter: blur(3px);
+    margin-bottom: 1em;
+}
+
+ul > li > a {
+    color: #ffe;
+    text-decoration: none;
+}
+
+.card-body > a {
+    text-decoration: none;
+    color: #d63384;
+}
+
+.candidato > .card {
+    cursor: pointer;
+}
+
+.login {
+    backdrop-filter: blur(2.5px);
+    box-shadow: 3px 6px 6px 6px #0005;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.titulo {
+    color: #ffe;
+    text-shadow: 0px 10px 10px #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
