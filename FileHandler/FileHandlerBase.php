@@ -1,12 +1,14 @@
 <?php
 
-    class FileHandlerBase{
+    // clase para el manejo de la creacion de los archivos
+    class FileHandlerBase {
 
-        protected $directory;
-        protected $filename;
+        // protected, para que estas variables sean visibles en las clases que heredan esta
+        protected $directory; // rote
+        protected $filename; // name of the file
 
-
-        function __construct($directory,$filename)
+        // recibe el directorio y el nombre del archivo, ambos tipo cadena
+        function __construct(String $directory, string $filename)
         {
             $this->directory = $directory;
             $this->filename = $filename;

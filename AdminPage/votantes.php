@@ -88,5 +88,4 @@
             </div>
         </div>
     </div>
-        <br  /><br  />
 <?php echo $layout->printFooter (); ?>

@@ -1,17 +1,17 @@
 <?php 
 
-    class CsvFileHandler extends FileHandlerBase{
+    class CsvFileHandler extends FileHandlerBase {
 
-        public function __construct($directory,$filename){
+        public function __construct($directory,$filename) {
             parent::__construct($directory,$filename);
         }
 
-        function SaveFile($value){
+        function SaveFile($value) {
 
-            parent::CreateDirectory($this->directory);
+            parent::CreateDirectory($this->directory); // crea el directorio si no existe
             $path = $this->directory . "/". $this->filename . ".csv";
 
-            $file = fopen($path, 'w+');
+            $file = fopen($path, 'w+'); // abre el path con permisos de escritura y lectura
 
             foreach ($value as $row) {
                 fputcsv($file, (array)$row,",");
@@ -25,7 +25,7 @@
             $this->CreateDirectory($this->directory);
             $path = $this->directory . "/". $this->filename . ".csv";      
     
-            if(file_exists($path)){
+            if(file_exists($path)) {
 
                 $data = [];
 

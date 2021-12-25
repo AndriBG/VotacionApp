@@ -62,7 +62,7 @@
 				</div>
 			</nav>
 
-			<main class="container">
+			<main class="">
 EOF;
 
 			echo $header;

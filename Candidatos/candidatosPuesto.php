@@ -29,9 +29,9 @@
     <h3 class="text-white">Candidatos Disponibles Para <?= $ServicePuesto->GetNameById($_GET["id"]); ?>s</h3>
 </div>
 
-<div class="row p-2">
+<div class="row p-5">
     <?php foreach ( $candidatos as $candidato ) : ?>
-        <div class="col-md-4 candidato mx-2 p-3" id="candidato" data-id="<?= $candidato->Id; ?>">
+        <div class="col-md-4 candidato mx-4 p-3" data-id="<?= $candidato->Id; ?>">
             <div class="card">
                 <div class="card-body">
                         <img class="card-img" src="../assets/img/profile/<?= $candidato->Foto; ?>"/>
@@ -43,8 +43,8 @@
     <?php  endforeach; ?>
 </div>
 
-<div class="container">
-    <button class="btn btn-success" id="votar">Elegir</button>
+<div class="d-grid">
+    <button class="btn btn-success btn-lg" id="votar">Elegir</button>
 </div>
 
 <?php echo $layout->printFooter (); ?>
