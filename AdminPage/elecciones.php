@@ -81,7 +81,6 @@
     <?php endif; ?>
 
 <!-- MODAL -->
-
     <div class="modal" id="modal-eleccion" tabindex="-1" aria-labelledby="modal-puestos-label" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -112,5 +111,4 @@
             </div>
         </div>
     </div>
-        <br  /><br  />
 <?php echo $layout->printFooter (); ?>

@@ -49,7 +49,8 @@
 			<link rel="stylesheet" href="{$directory}assets/css/bootstrap/bootstrap.min.css">
 			<link rel="stylesheet" href="{$directory}assets/css/style.css">
 			<link rel="stylesheet" href="{$directory}assets/css/jquery/plugin/toastr/toastr.min.css">
-			  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+			
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 		</head>
 		<body>
 			<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
@@ -65,19 +66,25 @@
 				</div>
 			</nav>
 
-			<main class="container">
+			<main class="container-fluid">
 EOF;
 
-			echo $header;
+				echo $header;
 
 		}
 
 		public function printFooter () {
 
-			$directory = ( $this->isRoot ) ? "" : "../"; 
+			$directory = ( $this->isRoot ) ? "" : "../";
+			$date = date('Y'); 
 			$footer = <<<EOF
 			</main>
-			</div>
+			<footer class="footer">
+				<address>
+					<p>&#169;Copyrigth {$date}</p>
+					<p>Created by Andri</p>
+				</address>
+			</footer>
 			<script src="{$directory}assets/js/bootstrap/bootstrap.min.js"></script>
 			<script src="{$directory}assets/js/jquery/jquery-3.5.1.min.js"></script>
             <script src="{$directory}assets/js/jquery/plugin/toastr/toastr.min.js"></script>
