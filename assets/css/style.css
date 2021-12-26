@@ -1,10 +1,13 @@
 body {
 
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(118,215,162,0.7819502801120448) 17%, rgba(0,212,255,1) 100%);
+/* background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%); */
     /* background-image: url("../img/background/Dragon-Scales.svg"); */
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
-    background-image: url("../img/background/Maintenance.svg");
+    /* background-image: url("../img/background/Maintenance.svg"); */
     /* background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0 bottom;
