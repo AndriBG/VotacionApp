@@ -28,7 +28,7 @@
     $Partidos = $servicePartido->GetList();
 
     $Elecciones = $serviceEleccion->GetList();
-    $IsActive = $utilities->isActive($Elecciones); // Devuelve true si hay una elección activa, sino false.
+    $IsActive = $utilities->isActive($Elecciones); // Devuelve true si hay una elección activa, sino, returna false.
 
     if (isset($_GET["id"])) {
         $candidato = $service->GetById($_GET["id"]);
@@ -43,9 +43,9 @@
         if($IsActive){
             $status = $pue->Estado;
         }
-
-        if(move_uploaded_file($_FILES["imagen"]["tmp_name"],"../assets/img/profile/" . $_FILES["imagen"]["name"])){
-            
+        var_dump($_FILES);die;
+        if(!move_uploaded_file($_FILES["imagen"]["tmp_name"],"../assets/img/profile/" . $_FILES["imagen"]["name"])){
+            // por si ocurre algun error para guardar una imagen
         }
 
         $candidato = new Candidato($_POST["Id"],$_POST["nombre"],$_POST["apellido"],$_POST["partido"],$_POST["puesto"],$_FILES["imagen"]["name"], $status);
@@ -79,7 +79,7 @@
 
             <div class="mb-3">
                 <label for="student-photo" class="form-label">Elija una foto</label>
-                <input name="imagen" required accept="image/png, image/jpeg" type="file"  class="form-control" id="student-photo">
+                <input name="imagen" required accept="image/png, image/jpeg, image/jpg, image/gif" type="file"  class="form-control" id="student-photo">
             </div>
 
             <div class="mb-3 col-md-4">
